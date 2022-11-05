@@ -6,7 +6,8 @@
 The instrumental variable $z$ has the property that changes in
 $z$ are associated with changes in $x$ but do not led to change in $y$ (aside from the indirect route via $x$). This leads to the following path diagram
 
-![Instrumental variable](pics/instrumental.png = 250x "Instrumental variable z")
+<img src="pics/instrumental.png" width="250">
+
 which introduces a variable $z$ that is associated with $x$ but not $u$. It is still the case that $z$ and $y$ will be correlated, but the only source of such correlation is the indirect
 path of $z$ being correlated with $x$ which in turn determines $y$.
 
