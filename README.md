@@ -5,9 +5,26 @@
 # Definitions
 
 suppose you know that carrying a lighter $A$ has no causal effect (causative or preventive) on anyone’s risk of lung cancer $Y$, i.e., $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1], and that cigarette smoking $L$ has a causal effect on both carrying a lighter $A$ and lung cancer $Y$. The causal diagram bellow is the graphical translation of this knowledge.
-<img src="pics/causality1.png" width="250">
 
-The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L is depicted as a common cause of $A$ and $L$.
+<p align="center"><img src="pics/causality1.png" width="250"></p>
+
+The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L$ is depicted as a common cause of $A$ and $L$.
+
+## collider
+
+Suppose you know that certain genetic
+haplotype  has no causal effect on anyone’s risk of becoming a cigarette
+smoker  , i.e., Pr[ =1 = 1] = Pr[ =0 = 1], and that both the haplotype 
+and cigarette smoking  have a causal effect on the risk of heart disease .
+The causal diagram bellow is the graphical translation of this knowledge.
+
+<p align="center"><img src="pics/collider.png" width="250"></p>
+
+
+The lack of an arrow between  and  indicates that the haplotype does not
+have a causal effect on cigarette smoking, and  is depicted as a common
+effect of  and . The common effect  is referred to as a collider on the path
+ →  ←  because two arrowheads collide on this node.
 
 
 ## Randomized experiments
@@ -15,13 +32,13 @@ The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does 
 ## Observational studies
 
 
-## collider
 
 ## Instrumental variables
 The instrumental variable $z$ has the property that changes in
 $z$ are associated with changes in $x$ but do not led to change in $y$ (aside from the indirect route via $x$). This leads to the following path diagram
 
-<img src="pics/instrumental.png" width="250">
+<p align="center"><img src="pics/instrumental.png" width="250"></p>
+
 
 which introduces a variable $z$ that is associated with $x$ but not $u$. It is still the case that $z$ and $y$ will be correlated, but the only source of such correlation is the indirect
 path of $z$ being correlated with $x$ which in turn determines $y$.
