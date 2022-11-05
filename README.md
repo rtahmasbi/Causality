@@ -3,14 +3,12 @@
 # Definitions
 
 ## Instrumental variables
-The instrumental variable z has the property that changes in
-z are associated with changes in x but do not led to change in y (aside from the
-indirect route via x). This leads to the following path diagram
+The instrumental variable $z$ has the property that changes in
+$z$ are associated with changes in $x$ but do not led to change in $y$ (aside from the indirect route via $x$). This leads to the following path diagram
 
-![Instrumental variable](pics/instrumental.png?raw=true "Instrumental variable")
-which introduces a variable z that is associated with x but not u. It is still the case
-that z and y will be correlated, but the only source of such correlation is the indirect
-path of z being correlated with x which in turn determines y.
+![Instrumental variable](pics/instrumental.png = 250x "Instrumental variable z")
+which introduces a variable $z$ that is associated with $x$ but not $u$. It is still the case that $z$ and $y$ will be correlated, but the only source of such correlation is the indirect
+path of $z$ being correlated with $x$ which in turn determines $y$.
 
 
 
