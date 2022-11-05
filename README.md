@@ -17,7 +17,7 @@ Suppose you know that certain genetic haplotype $A$ has no causal effect on anyo
 <p align="center"><img src="pics/collider.png" width="250"></p>
 
 
-The lack of an arrow between $A$ and $L$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a *collider* on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
+The lack of an arrow between $A$ and $L$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L$ is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a *collider* on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
 
 
 ## Randomized experiments
