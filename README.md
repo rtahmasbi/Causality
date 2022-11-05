@@ -11,7 +11,7 @@ $z$ are associated with changes in $x$ but do not led to change in $y$ (aside fr
 which introduces a variable $z$ that is associated with $x$ but not $u$. It is still the case that $z$ and $y$ will be correlated, but the only source of such correlation is the indirect
 path of $z$ being correlated with $x$ which in turn determines $y$.
 
-
+### Examples of an Instrument
 
 ### Instrumental Variables Estimator
 
@@ -77,6 +77,20 @@ https://www.statisticshowto.com/mediator-variable/
 
 # reference
 ## books
+Causal Inference: What If, Miguel A. Hernán, James M. Robins, December 31, 2020
+https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/
+
+<img src="pics/Causal Inference What If.png" width="400">
+
+
+
+
+# key people
+Miguel Hernan, Kolokotrones Professor of Biostatistics and Epidemiology at Harvard and Broad Institute
+https://www.hsph.harvard.edu/profile/miguel-hernan/
+
+
+
 
 
 ## videos
