@@ -1,6 +1,21 @@
 # Causality
 
+
+
 # Definitions
+
+suppose you know that carrying a lighter $A$ has no causal effect (causative or preventive) on anyone’s risk of lung cancer $Y$, i.e., $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1], and that cigarette smoking $L$ has a causal effect on both carrying a lighter $A$ and lung cancer $Y$. The causal diagram bellow is the graphical translation of this knowledge.
+<img src="pics/causality1.png" width="250">
+
+The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L is depicted as a common cause of $A$ and $L$.
+
+
+## Randomized experiments
+
+## Observational studies
+
+
+## collider
 
 ## Instrumental variables
 The instrumental variable $z$ has the property that changes in
@@ -75,12 +90,14 @@ https://www.statisticshowto.com/mediator-variable/
 
 
 
-# reference
-## books
+# Reference
+## Books
 Causal Inference: What If, Miguel A. Hernán, James M. Robins, December 31, 2020
 https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/
 
 <img src="pics/Causal Inference What If.png" width="400">
+
+
 
 
 
