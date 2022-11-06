@@ -4,11 +4,31 @@
 
 # Definitions
 
-suppose you know that carrying a lighter $A$ has no causal effect (causative or preventive) on anyone’s risk of lung cancer $Y$, i.e., $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1], and that cigarette smoking $L$ has a causal effect on both carrying a lighter $A$ and lung cancer $Y$. The causal diagram bellow is the graphical translation of this knowledge.
+
+## Randomized experiments
+
+## Observational studies
+
+## Interventions
+
+
+## Interaction
+Suppose you know that carrying a lighter $A$ has no causal effect (causative or preventive) on anyone’s risk of lung cancer $Y$, i.e., $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1]$, and that cigarette smoking $L$ has a causal effect on both carrying a lighter $A$ and lung cancer $Y$. The causal diagram bellow is the graphical translation of this knowledge.
 
 <p align="center"><img src="pics/causality1.png" width="250"></p>
 
-The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L$ is depicted as a common cause of $A$ and $L$.
+The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L$ is depicted as a common cause of $A$ and $Y$.
+
+
+
+## Association
+Association, unlike causation, is a symmetric relationship between two variables (an edge without direction); thus, when present, association flows between two variables regardless of the direction of the causal arrows.
+
+We know that carrying a lighter $A$ has no causal effect on lung cancer $Y$. The question now is whether carrying a lighter $A$ is associated with lung cancer $Y$. That is, we know that $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1]$ but is it also true that $Pr[Y = 1 | A = 1] = Pr[Y = 1 | A = 0]$?
+
+
+We learn that Hera is carrying a lighter. But if Hera is carrying a lighter ($A$ = 1), then it is more likely that she is a smoker ($L$ = 1), and therefore she has a greater than average risk of developing lung cancer ($Y$ = 1). We then intuitively conclude that $A$ and $Y$ are expected to be associated because the cancer risk in those carrying a lighter ($A$ = 1) is different from the cancer risk in those not carrying a lighter ($A$ = 0), or $Pr[Y = 1|A = 1] \ne Pr[Y = 1|A = 0]$. In other words, having information about the treatment $A$ improves our ability to predict the outcome $Y$, even though $A$ does not have a causal effect on $Y$. The investigator will make a mistake if he concludes that $A$ has a causal effect on $Y$ just because $A$ and $Y$ are associated. Causal graphs theory again con rms our intuition. In graphic terms, $A$ and $Y$ are associated because there is a flow of association from $A$ to $Y$ (or, equivalently, from $Y$ to $A$) through the common cause $L$.
+
 
 ## collider
 
@@ -17,13 +37,34 @@ Suppose you know that certain genetic haplotype $A$ has no causal effect on anyo
 <p align="center"><img src="pics/collider.png" width="250"></p>
 
 
-The lack of an arrow between $A$ and $L$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L$ is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a *collider* on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
+The lack of an arrow between $A$ and $Y$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L$ is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a *collider* on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
 
 
-## Randomized experiments
+Now lets check whether A and Y are associated.
+Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with ($A$ = 1) and without ($A$ = 0) the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent or $A \independent Y$.
 
-## Observational studies
+Causal graphs theory again con rms our intuition because it says  that colliders, unlike other variables, block the flow of association along the path on which they lie.
 
+
+## mediator
+Now suppose we obtain an additional piece of information: aspirin $A$ affects the risk of heart disease $Y$ because it reduces platelet aggregation $B$. This new knowledge is translated into the causal diagram of the following Figure  that shows platelet aggregation $B$ (1: high, 0: low) as a mediator of the effect of $A$ on $Y$.
+<p align="center"><img src="pics/mediator.png" width="250"></p>
+
+
+
+
+
+
+## Confounding
+confounding is the bias due to common causes of treatment and outcome. Bellow is the graph of a treatment $A$, an outcome $Y$, and their shared (or common) cause $L$.
+
+
+
+
+## Selection bias
+
+
+## propensity score
 
 
 ## Instrumental variables
@@ -52,6 +93,10 @@ path of $z$ being correlated with $x$ which in turn determines $y$.
 
 
 ## Causality and mediators
+
+
+
+
 
 
 # Casualty vs prediction
