@@ -41,7 +41,7 @@ The lack of an arrow between $A$ and $Y$ indicates that the haplotype does not h
 
 
 Now lets check whether A and Y are associated.
-Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with ( $A$ = 1) and without ( $A$ = 0) the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent or $A \rotatebox[origin=c]{90}{\models} Y$.
+Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with ( $A$ = 1) and without ( $A$ = 0) the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent or $A \mathrel{\unicode{x2AEB}} Y$.
 
 Causal graphs theory again con rms our intuition because it says  that colliders, unlike other variables, block the flow of association along the path on which they lie.
 
