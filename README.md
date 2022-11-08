@@ -25,7 +25,7 @@ Individual causal effects are de ned as a contrast of the values of counterfac
 When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__ $(A \mathrel{\unicode{x2AEB}} Y)$, that $A$ is not associated with $Y$.
 
 
-<p align="center"><img src="pics/book_Causal Inference-what if_v3.tiff" width="400"></p>
+<p align="center"><img src="pics/causation_vs_assosiation.png" width="400"></p>
 
 
 
