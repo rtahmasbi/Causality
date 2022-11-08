@@ -22,6 +22,12 @@ Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
 Individual causal effects are de ned as a contrast of the values of counterfactual outcomes, but only one of those outcomes is observed for each individual| the one corresponding to the treatment value actually experienced by the individual. All other counterfactual outcomes remain unobserved.
 
 ## Causation versus association
+When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__ $(A \mathrel{\unicode{x2AEB}} Y)$, that $A$ is not associated with $Y$.
+
+
+<p align="center"><img src="pics/book_Causal Inference-what if_v3.tiff" width="400"></p>
+
+
 
 
 ## Randomized experiments
@@ -44,7 +50,7 @@ __Association__, unlike causation, is a symmetric relationship between two varia
 We know that carrying a lighter $A$ has no causal effect on lung cancer $Y$. The question now is whether carrying a lighter $A$ is associated with lung cancer $Y$. That is, we know that $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1]$ but is it also true that $Pr[Y = 1 | A = 1] = Pr[Y = 1 | A = 0]$?
 
 
-We learn that Hera is carrying a lighter. But if Hera is carrying a lighter $(A = 1)$, then it is more likely that she is a smoker $(L=1)$, and therefore she has a greater than average risk of developing lung cancer $(Y= 1)$. We then intuitively conclude that $A$ and $Y$ are expected to be associated because the cancer risk in those carrying a lighter $(A=1)$ is different from the cancer risk in those not carrying a lighter $(A=0)$, or $Pr[Y = 1|A = 1] \ne Pr[Y = 1|A = 0]$. In other words, having information about the treatment $A$ improves our ability to predict the outcome $Y$, even though $A$ does not have a causal effect on $Y$. The investigator will make a mistake if he concludes that $A$ has a causal effect on $Y$ just because $A$ and $Y$ are associated. Causal graphs theory again con rms our intuition. In graphic terms, $A$ and $Y$ are associated because there is a flow of association from $A$ to $Y$ (or, equivalently, from $Y$ to $A$) through the common cause $L$.
+We learn that Hera is carrying a lighter. But if Hera is carrying a lighter $(A = 1)$, then it is more likely that she is a smoker $(L=1)$, and therefore she has a greater than average risk of developing lung cancer $(Y= 1)$. We then intuitively conclude that $A$ and $Y$ are expected to be associated because the cancer risk in those carrying a lighter $(A=1)$ is different from the cancer risk in those not carrying a lighter $(A=0)$, or $Pr[Y = 1|A = 1] \ne Pr[Y = 1|A = 0]$. In other words, having information about the treatment $A$ improves our ability to predict the outcome $Y$, even though $A$ does not have a causal effect on $Y$. The investigator will make a mistake if he concludes that $A$ has a causal effect on $Y$ just because $A$ and $Y$ are associated. Causal graphs theory again confirms our intuition. In graphic terms, $A$ and $Y$ are associated because there is a flow of association from $A$ to $Y$ (or, equivalently, from $Y$ to $A$) through the common cause $L$.
 
 
 ## collider
@@ -54,13 +60,13 @@ Suppose you know that certain genetic haplotype $A$ has no causal effect on anyo
 <p align="center"><img src="pics/collider.png" width="250"></p>
 
 
-The lack of an arrow between $A$ and $Y$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L$ is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a *collider* on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
+The lack of an arrow between $A$ and $Y$ indicates that the haplotype does not have a causal effect on cigarette smoking, and $L$ is depicted as a common effect of $A$ and $Y$. The common effect $L$ is referred to as a __collider__ on the path $A \rightarrow L \leftarrow Y$ because two arrowheads collide on this node.
 
 
 Now lets check whether A and Y are associated.
 Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with $(A=1)$ and without $(A=0)$ the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent or $A \mathrel{\unicode{x2AEB}} Y$.
 
-Causal graphs theory again con rms our intuition because it says  that colliders, unlike other variables, block the flow of association along the path on which they lie.
+Causal graphs theory again confirms our intuition because it says that colliders, unlike other variables, block the flow of association along the path on which they lie.
 
 
 ## mediator
@@ -73,7 +79,7 @@ Now suppose we obtain an additional piece of information: aspirin $A$ affects th
 
 
 ## Confounding
-confounding is the bias due to common causes of treatment and outcome. Bellow is the graph of a treatment $A$, an outcome $Y$, and their shared (or common) cause $L$.
+__Confounding__ is the bias due to common causes of treatment and outcome. Bellow is the graph of a treatment $A$, an outcome $Y$, and their shared (or common) cause $L$.
 
 
 
