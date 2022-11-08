@@ -14,6 +14,10 @@ We can now provide a formal definition of a causal effect for an individual: The
 The variables $Y^{a=1}$ and $Y^{a=0}$ are referred to as __potential outcomes__ or as __counterfactual outcomes__.
 
 
+<p align="center"><img src="pics/table1_1.png" width="200"><img src="pics/table1_2.png" width="200"></p>
+
+
+
 For each individual, one of the counterfactual outcomes -- the one that corresponds to the treatment value that the individual did receive -- is actually factual. For example, because Zeus was actually treated $(A = 1)$, his counterfactual outcome under treatment $Y^{a=1} = 1$ is equal to his observed (actual) outcome $Y = 1$. That is, an individual with observed treatment $A$ equal to $a$, has observed outcome $Y$ equal to his counterfactual outcome $Y^a$. This equality can be succinctly expressed as $Y=Y^A$ where $Y^A$ denotes the counterfactual $Y^a$ evaluated at the value $a$ corresponding to the individual's observed treatment $A$. The equality $Y=Y^A$ is referred to as __consistency__.
 
 Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
@@ -25,7 +29,7 @@ Individual causal effects are de ned as a contrast of the values of counterfac
 When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__ $(A \mathrel{\unicode{x2AEB}} Y)$, that $A$ is not associated with $Y$.
 
 
-<p align="center"><img src="pics/causation_vs_assosiation.png" width="400"></p>
+<p align="center"><img src="pics/causation_vs_assosiation.png" width="600"></p>
 
 
 
