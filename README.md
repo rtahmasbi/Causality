@@ -14,7 +14,7 @@ We can now provide a formal definition of a causal effect for an individual: The
 The variables $Y^{a=1}$ and $Y^{a=0}$ are referred to as __potential outcomes__ or as __counterfactual outcomes__.
 
 
-<p align="center"><img src="pics/table1_1.png" width="200"><img src="pics/table1_2.png" width="200"></p>
+<p align="center"><img src="pics/table1_1.png" hight="500"> <img src="pics/table1_2.png" hight="500"></p>
 
 
 
