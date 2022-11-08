@@ -4,6 +4,21 @@
 
 # Definitions
 
+## Notation
+Let $Y^{a=1}$ (read $Y$ under treatment $a=1$) be the outcome variable that would have been observed under the treatment value $a=1$, and $Y^{a=0}$ (read $Y$ under treatment $a = 0$) the outcome variable that would have been observed under $A$ the treatment value $a = 0$.
+
+
+We can now provide a formal definition of a causal effect for an individual: The treatment $A$ has a *causal effect* on an individual's outcome $Y$ if $Y^{a=1} \ne Y^{a=0}$ for the individual.
+
+
+The variables $Y^{a=1}$ and $Y^{a=0}$ are referred to as *potential outcomes* or as *counterfactual outcomes*.
+
+
+For each individual, one of the counterfactual outcomes -- the one that corresponds to the treatment value that the individual did receive -- is actually factual. For example, because Zeus was actually treated $(A = 1)$, his counterfactual outcome under treatment $Y^{a=1} = 1$ is equal to his observed (actual) outcome $Y = 1$. That is, an individual with observed treatment $A$ equal to $a$, has observed outcome $Y$ equal to his counterfactual outcome $Y^a$. This equality can be succinctly expressed as $Y=Y^A$ where $Y^A$ denotes the counterfactual $Y^a$ evaluated at the value $a$ corresponding to the individual's observed treatment $A$. The equality $Y=Y^A$ is referred to as *consistency*.
+
+Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
+
+
 
 ## Randomized experiments
 
@@ -20,9 +35,7 @@ Suppose you know that carrying a lighter $A$ has no causal effect (causative or 
 The lack of an arrow between $A$ and $Y$ indicates that carrying a lighter does not have a causal effect on lung cancer; $L$ is depicted as a common cause of $A$ and $Y$.
 
 
-
-## Association
-Association, unlike causation, is a symmetric relationship between two variables (an edge without direction); thus, when present, association flows between two variables regardless of the direction of the causal arrows.
+*Association*, unlike causation, is a symmetric relationship between two variables (an edge without direction); thus, when present, association flows between two variables regardless of the direction of the causal arrows.
 
 We know that carrying a lighter $A$ has no causal effect on lung cancer $Y$. The question now is whether carrying a lighter $A$ is associated with lung cancer $Y$. That is, we know that $Pr[Y^{a=1} = 1] = Pr[Y^{a=0} = 1]$ but is it also true that $Pr[Y = 1 | A = 1] = Pr[Y = 1 | A = 0]$?
 
