@@ -10,6 +10,9 @@ Let $Y^{a=1}$ (read $Y$ under treatment $a=1$) be the outcome variable that woul
 
 We can now provide a formal definition of a causal effect for an individual: The treatment $A$ has a __causal effect__ on an individual's outcome $Y$ if $Y^{a=1} \ne Y^{a=0}$ for the individual.
 
+Epidemiologists, statisticians, economists, and other social scientists refer to the __action__ $A$ as an __intervention__, an __exposure__, a __policy__, or a __treatment__.
+
+
 
 The variables $Y^{a=1}$ and $Y^{a=0}$ are referred to as __potential outcomes__ or as __counterfactual outcomes__.
 
@@ -25,12 +28,15 @@ Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
 
 Individual causal effects are de ned as a contrast of the values of counterfactual outcomes, but only one of those outcomes is observed for each individual| the one corresponding to the treatment value actually experienced by the individual. All other counterfactual outcomes remain unobserved.
 
+
 ## Causation versus association
 When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__ $(A \mathrel{\unicode{x2AEB}} Y)$, that $A$ is not associated with $Y$.
 
 
 <p align="center"><img src="pics/causation_vs_assosiation.png" width="600"></p>
 
+
+Causal inference requires data like the hypothetical data in Table 1.1, but all we can ever expect to have is real world data like those in Table 1.2. The question is then under which conditions real world data can be used for causal inference. The next chapter provides one answer: conduct a randomized experiment.
 
 
 
@@ -142,6 +148,7 @@ A mediator variable explains the process through which two variables are related
 
 https://psychdrop.com/2020/04/05/mediation-versus-moderation-whats-the-difference/
 
+(add picture from the link)
 
 Mediators mediate the relationship between X and Y. This occurs by X affecting M leading to M affecting Y, which is called the indirect effect. The direct effect is the relationship between X and Y in the presence of a mediator. Mediation occurs when (1) there is a statistically significant indirect effect (2) the direct effect is smaller than the total effect.
 
@@ -185,6 +192,16 @@ https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/
 
 
 # key people
+<p align="center"><img src="pics/jp-seas-2018.jpg" height="400"></p>
+Judea Pearl
+
+http://bayes.cs.ucla.edu/jp_home.html
+Professor of Computer Science Department, Cognitive Systems Lab, UCLA
+
+
+
+
+
 Miguel Hernan, Kolokotrones Professor of Biostatistics and Epidemiology at Harvard and Broad Institute
 https://www.hsph.harvard.edu/profile/miguel-hernan/
 
