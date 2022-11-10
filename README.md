@@ -202,7 +202,10 @@ Professor of Computer Science Department, Cognitive Systems Lab, UCLA
 
 
 
-Miguel Hernan, Kolokotrones Professor of Biostatistics and Epidemiology at Harvard and Broad Institute
+<p align="center"><img src="pics/jDH_fEsK_400x400.jpg" height="400"></p>
+Miguel Hernan,
+
+Kolokotrones Professor of Biostatistics and Epidemiology at Harvard and Broad Institute
 https://www.hsph.harvard.edu/profile/miguel-hernan/
 
 
