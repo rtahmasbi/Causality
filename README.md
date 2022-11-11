@@ -1,5 +1,9 @@
 # Causality
 
+$do(x=2)$ will set $x=2$ in the graph, but conditional filters data having that condition.
+
+
+
 ## Reichenbach’s common cause principle
 If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. (As a special case, $Z$ may coincide with either $X$ or $Y$.) Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
 
@@ -36,15 +40,17 @@ Assume
 $$C:= N_C$$
 $$E:=4 C + N_E$$
 with $N_C, N_E \sim N(0,1)$. Graphically,
-$$C \rightarrow E$$.
+$$C \rightarrow E.$$
 Then
 $$P_E = N(0,17)$$
 $$P_E^{do(C:=2)} = P_{E|C=2} = N(8,1)$$
 $$P_E^{do(C:=3)} = P_{E|C=3} = N(12,1)$$
-now
-$$P_C^{do(E:=2)} = N(0,1)$$
-or
-$$P_C^{do(E:=100)} = N(0,1) \neq P_{C|E=2}$$.
+and
+$$P_C^{do(E:=100)} = N(0,1)$$
+(no matter how much we whiten someone’s teeth, this will not have any effect on this person’s smoking habits)
+similarly,
+$$P_C^{do(E:=2)} = N(0,1) \neq P_{C|E=2} = N(8/17, 1/17).$$
+(proof is based on the conditional multivariate normal distribution)
 
 
 
@@ -194,6 +200,30 @@ Being a developed country cannot influence its mortality rate directly. But afte
 https://www.statisticshowto.com/mediator-variable/
 
 
+# Causal, non-causal (acausal) and anti-causal systems
+https://en.wikipedia.org/wiki/Causal_system
+
+"Elements of Causal Inference" book has a good example in Figure 5.1.
+
+
+
+
+# values
+- average treatment effect (ATE)
+- average treatment effect on the treated (ATT)
+- treatment-on-the-treated (TOT) effect
+- average treatment effect on the untreated (ATU)
+
+
+The Cause Question: What is a cause of a given effect?
+The Effect Question: What is an effect of a given cause?
+
+
+problem of overdetermination and
+the problem of preemption
+
+
+
 
 # Causality and Recommendation system
 
@@ -234,6 +264,7 @@ https://www.hsph.harvard.edu/profile/miguel-hernan/
 
 ## videos
 https://www.youtube.com/watch?v=gRkUhg9Wb-I&ab_channel=MITOpenCourseWare
+
 
 
 
