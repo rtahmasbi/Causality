@@ -33,8 +33,19 @@ Individual causal effects are de ned as a contrast of the values of counterfac
 
 ## Interventions
 Assume
-$$C:= N_C\\ E:=4 C + N_E$$
-with $N_C, N_E \sim N(0,1)$
+$$C:= N_C$$
+$$E:=4 C + N_E$$
+with $N_C, N_E \sim N(0,1)$. Graphically,
+$$C \rightarrow E$$.
+Then
+$$P_E = N(0,17)$$
+$$P_E^{do(C:=2)} = P_{E|C=2} = N(8,1)$$
+$$P_E^{do(C:=3)} = P_{E|C=3} = N(12,1)$$
+now
+$$P_C^{do(E:=2)} = N(0,1)$$
+or
+$$P_C^{do(E:=100)} = N(0,1) \neq P_{C|E=2}$$.
+
 
 
 
