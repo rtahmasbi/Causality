@@ -1,5 +1,7 @@
 # Causality
 
+## Reichenbach’s common cause principle
+If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. (As a special case, $Z$ may coincide with either $X$ or $Y$.) Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
 
 
 # Definitions
@@ -27,6 +29,13 @@ Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
 
 
 Individual causal effects are de ned as a contrast of the values of counterfactual outcomes, but only one of those outcomes is observed for each individual| the one corresponding to the treatment value actually experienced by the individual. All other counterfactual outcomes remain unobserved.
+
+
+## Interventions
+Assume
+$$C:= N_C\\ E:=4 C + N_E$$
+with $N_C, N_E \sim N(0,1)$
+
 
 
 ## Causation versus association
