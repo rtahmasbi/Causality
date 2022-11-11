@@ -1,11 +1,9 @@
 # Causality
 
-$do(x=2)$ will set $x=2$ in the graph, but conditional filters data having that condition.
-
 
 
 ## Reichenbach’s common cause principle
-If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. (As a special case, $Z$ may coincide with either $X$ or $Y$.) Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
+If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
 
 
 # Definitions
@@ -50,8 +48,9 @@ $$P_C^{do(E:=100)} = N(0,1)$$
 (no matter how much we whiten someone’s teeth, this will not have any effect on this person’s smoking habits)
 similarly,
 $$P_C^{do(E:=2)} = N(0,1) \neq P_{C|E=2} = N(8/17, 1/17).$$
-(proof is based on the conditional multivariate normal distribution)
+proof of $P_{C|E=2}$ is based on the conditional multivariate normal distribution.
 
+$do(E=2)$ sets $E=2$ in the graph, but conditional filters data having that condition.
 
 
 
@@ -231,12 +230,20 @@ the problem of preemption
 
 # Reference
 ## Books
+<img src="pics/Causal Inference What If.png" width="400">
 Causal Inference: What If, Miguel A. Hernán, James M. Robins, December 31, 2020
 https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/
 
-<img src="pics/Causal Inference What If.png" width="400">
 
 
+
+<img src="pics/Quasi-Experimentation.png" width="400">
+Quasi-Experimentation: A Guide to Design and Analysis, Charles S. Reichardt
+
+
+
+<img src="pics/Elements of Causal Inference.png" width="400">
+Elements of Causal Inference: Foundations and Learning Algorithms, Jonas Peters, Dominik Janzing, and Bernhard Sch¨olkopf
 
 
 
@@ -265,7 +272,14 @@ https://www.hsph.harvard.edu/profile/miguel-hernan/
 ## videos
 https://www.youtube.com/watch?v=gRkUhg9Wb-I&ab_channel=MITOpenCourseWare
 
+https://www.youtube.com/watch?v=zvrcyqcN9Wo&ab_channel=BroadInstitute
 
+
+
+# Causality data
+## Medical Information Mart for Intensive Care
+https://github.com/MIT-LCP/mimic-code
+https://mimic.mit.edu/
 
 
 
