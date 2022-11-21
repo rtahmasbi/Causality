@@ -243,7 +243,7 @@ Quasi-Experimentation: A Guide to Design and Analysis, Charles S. Reichardt
 
 
 <img src="pics/Elements of Causal Inference.png" width="400">
-Elements of Causal Inference: Foundations and Learning Algorithms, Jonas Peters, Dominik Janzing, and Bernhard Sch¨olkopf
+Elements of Causal Inference: Foundations and Learning Algorithms, Jonas Peters, Dominik Janzing, and Bernhard Scholkopf
 
 
 
@@ -282,6 +282,55 @@ https://github.com/MIT-LCP/mimic-code
 https://mimic.mit.edu/
 
 
+
+# package
+https://github.com/Microsoft/EconML
+https://www.microsoft.com/en-us/research/group/alice/
+
+
+https://github.com/uber/causalml
+
+
+
+
+
+# Causal Calculus
+https://www.cs.ubc.ca/labs/lci/mlrg/slides/doCalc.pdf
+
+
+There is observational data (”seeing”) and interventional data (”doing”) Usually the DAG is designed for observational data, but that ignores the possibility of unobserved variables, also without interventional data you can’t distinguish the direction of causality.
+Simplest external intervention: a single variable is forced to take some fixed value (in a graph remove arrows entering that variable)
+
+## D-separation
+”chain”, ”fork”, ”v-structure” or ”collider”
+
+$A$ and $B$ are `d-separated`, give $C$, iff corresponding random variables are conditionally independent:
+$$p(A, B|C) = p(A|C)p(B|C).$$
+
+If $A$ and $B$ are not d-separated they are `d-connected`.
+
+## do-calculus
+`do()` operator marks an action or an intervention in the model. In an algebraic model we replace certain functions with a constant $X = x$, and in a graph we remove edges going into the target of intervention, but preserve edges going out of the target.
+
+- Rule 1 (Insertion/deletion of observations)
+- Rule 2 (Action/observation exchange)
+- Rule 3 (Insertion/deletion of actions)
+
+
+Goal is to generate probabilistic formulas for the effect of interventions in
+terms of the observed probabilities.
+
+
+Not all models are acyclic. See for example Modeling Discrete Interventional Data Using Directed Cyclic Graphical Models (UAI 2009) by Mark Schmidt and Kevin Murphy
+
+The do-calculus is an axiomatic system for replacing probability formulas containing the do operator with ordinary conditional probabilities.
+
+
+## Do-calculus adventures
+https://www.andrewheiss.com/blog/2021/09/07/do-calculus-backdoors/
+Rule 1: Decide if we can ignore an observation
+Rule 2: Decide if we can treat an intervention as an observation
+Rule 3: Decide if we can ignore an intervention
 
 
 
