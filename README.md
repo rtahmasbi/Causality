@@ -1,10 +1,12 @@
 # Causality
 
+
+
 Before starting Causality, it is good to start with the following papers:
 ## AI Can’t Reason Why
 This is a nice article written by Judea Pearl and Dana Mackenzie in WSJ. [Link](https://www.wsj.com/articles/ai-cant-reason-why-1526657442)
 
-"The current data-crunching approach to machine learning misses an essential element of human intelligence."
+__The current data-crunching approach to machine learning misses an essential element of human intelligence.__
 
 Put simply, today’s machine-learning programs can’t tell whether a crowing rooster makes the sun rise, or the other way around. Whatever volumes of data a machine analyzes, it cannot understand what a human gets intuitively. From the time we are infants, we organize our experiences into causes and effects. The questions “Why did this happen?” and “What if I had acted differently?” are at the core of the cognitive advances that made us human, and so far are missing from machines.
 
@@ -16,8 +18,7 @@ Machine-learning systems have made astounding progress at analyzing data pattern
 
 
 
-## Prediction or causality?
-__A scoping review of their conflation within current observational research__
+## Prediction or causality? A scoping review of their conflation within current observational research
 
 This paper is published in 2021 in European Journal of Epidemiology. [Link](https://link.springer.com/article/10.1007/s10654-021-00794-w)
 
@@ -26,7 +27,7 @@ Causal and prediction research usually require different methods, and yet their 
 
 
 ## Effects of Causes and Causes of Effects
-[Link](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-070121-061120)
+A nice paper published in 2022: [Link](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-070121-061120)
 
 We describe and contrast two distinct problem areas for statistical causality: studying the likely effects of an intervention ("effects of causes"), and studying whether there is a causal link between the observed exposure and outcome in an individual case ("causes of effects").
 
