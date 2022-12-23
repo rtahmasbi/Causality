@@ -1,12 +1,47 @@
 # Causality
 
+Before starting Causality, it is good to start with the following papers:
+## AI Can’t Reason Why
+This is a nice article written by Judea Pearl and Dana Mackenzie in WSJ. [Link](https://www.wsj.com/articles/ai-cant-reason-why-1526657442)
+
+"The current data-crunching approach to machine learning misses an essential element of human intelligence."
+
+Put simply, today’s machine-learning programs can’t tell whether a crowing rooster makes the sun rise, or the other way around. Whatever volumes of data a machine analyzes, it cannot understand what a human gets intuitively. From the time we are infants, we organize our experiences into causes and effects. The questions “Why did this happen?” and “What if I had acted differently?” are at the core of the cognitive advances that made us human, and so far are missing from machines.
 
 
-## Reichenbach’s common cause principle
-If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
+Suppose, for example, that a drugstore decides to entrust its pricing to a machine learning program that we’ll call Charlie. The program reviews the store’s records and sees that past variations of the price of toothpaste haven’t correlated with changes in sales volume. So Charlie recommends raising the price to generate more revenue. A month later, the sales of toothpaste have dropped—along with dental floss, cookies and other items. Where did Charlie go wrong? Charlie didn’t understand that the previous (human) manager varied prices only when the competition did. When Charlie unilaterally raised the price, dentally price-conscious customers took their business elsewhere. The example shows that historical data alone tells us nothing about causes—and that the direction of causation is crucial.
+
+
+Machine-learning systems have made astounding progress at analyzing data patterns, but that is the low-hanging fruit of artificial intelligence. To reach the higher fruit, AI needs a ladder, which we call the Ladder of Causation. Its rungs represent three levels of reasoning.
+
+
+
+## Prediction or causality?
+__A scoping review of their conflation within current observational research__
+
+This paper is published in 2021 in European Journal of Epidemiology. [Link](https://link.springer.com/article/10.1007/s10654-021-00794-w)
+
+
+Causal and prediction research usually require different methods, and yet their findings may get conflated when reported and interpreted. The aim of the current study is to quantify the frequency of conflation between etiological and prediction research, to discuss common underlying mistakes and provide recommendations on how to avoid these.
+
+
+## Effects of Causes and Causes of Effects
+[Link](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-070121-061120)
+
+We describe and contrast two distinct problem areas for statistical causality: studying the likely effects of an intervention ("effects of causes"), and studying whether there is a causal link between the observed exposure and outcome in an individual case ("causes of effects").
+
+
+## Forecasting Causal Effects of Interventions versus Predicting Future Outcomes
+[Link](https://www.tandfonline.com/doi/full/10.1080/10705511.2020.1780598)
+
+
+
 
 
 # Definitions
+
+## Reichenbach’s common cause principle
+If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
 
 ## Notation
 Let $Y^{a=1}$ (read $Y$ under treatment $a=1$) be the outcome variable that would have been observed under the treatment value $a=1$, and $Y^{a=0}$ (read $Y$ under treatment $a = 0$) the outcome variable that would have been observed under $A$ the treatment value $a = 0$.
