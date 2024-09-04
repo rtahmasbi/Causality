@@ -42,7 +42,7 @@ We describe and contrast two distinct problem areas for statistical causality: s
 # Definitions
 
 ## Reichenbach’s common cause principle
-If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{\unicode{x2AEB}} Z$.
+If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{independent} Z$.
 
 ## Notation
 Let $Y^{a=1}$ (read $Y$ under treatment $a=1$) be the outcome variable that would have been observed under the treatment value $a=1$, and $Y^{a=0}$ (read $Y$ under treatment $a = 0$) the outcome variable that would have been observed under $A$ the treatment value $a = 0$.
