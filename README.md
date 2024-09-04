@@ -280,6 +280,15 @@ Two important questions:
 
 
 
+## Average Treatment Effect on the Treated (ATT)
+In the context of a __randomized__ controlled trial, the ATT can be estimated by comparing the outcomes of individuals who received the treatment to the outcomes of individuals who did not receive the treatment, but who were otherwise similar in all relevant respects.
+
+In __observational__ studies, where the assignment of treatment is not random, the ATT can be estimated using methods such as propensity score matching or regression analysis that adjust for confounding factors that may affect both the treatment assignment and the outcome.
+
+
+
+
+
 # problem of overdetermination and the problem of preemption
 
 
