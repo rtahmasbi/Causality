@@ -1,8 +1,8 @@
 # Causality
 
-
-
 Before starting Causality, it is good to start with the following papers:
+
+
 ## AI Can’t Reason Why
 This is a nice article written by Judea Pearl and Dana Mackenzie in WSJ. [Link](https://www.wsj.com/articles/ai-cant-reason-why-1526657442)
 
@@ -361,7 +361,8 @@ https://mimic.mit.edu/
 ## causalml - by uber
 https://github.com/uber/causalml
 
-They use ML for uplift modeling and they dont care about the causal graph, they more are intersted in the treatment effect. They are hevily dependent on the uplift model.
+They use ML for uplift modeling and they dont care about the causal graph, they are intersted in the treatment effect. The model is hevily dependent on the uplift model assumptions.
+
 
 > It allows user to estimate the Conditional Average Treatment Effect (CATE) or Individual Treatment Effect (ITE) from experimental or observational data. Essentially, it estimates the causal impact of intervention $T$ on outcome $Y$ for users with observed features $X$, without strong assumptions on the model form.
 
@@ -384,7 +385,7 @@ There are 4 groups
 The only segment that provides true incremental responses is the Persuadables.
 
 Uplift modelling provides a scoring technique that can separate customers into the groups described above.
-(How?)
+__(How?)__
 
 Traditional response modelling often targets the Sure Things being unable to distinguish them from the Persuadables.
 
@@ -415,14 +416,19 @@ https://github.com/Microsoft/EconML
 https://www.cs.ubc.ca/labs/lci/mlrg/slides/doCalc.pdf
 
 
-There is observational data (”seeing”) and interventional data (”doing”) Usually the DAG is designed for observational data, but that ignores the possibility of unobserved variables, also without interventional data you can’t distinguish the direction of causality.
+There is observational data (seeing) and interventional data (doing). Usually the DAG is designed for observational data, but that ignores the possibility of unobserved variables, also without interventional data you can’t distinguish the direction of causality.
+
 Simplest external intervention: a single variable is forced to take some fixed value (in a graph remove arrows entering that variable)
+
+
 
 ## D-separation
 ”chain”, ”fork”, ”v-structure” or ”collider”
 
 $A$ and $B$ are `d-separated`, give $C$, iff corresponding random variables are conditionally independent:
+
 $$p(A, B|C) = p(A|C)p(B|C).$$
+
 
 If $A$ and $B$ are not d-separated they are `d-connected`.
 
