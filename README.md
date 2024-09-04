@@ -42,7 +42,7 @@ We describe and contrast two distinct problem areas for statistical causality: s
 # Definitions
 
 ## Reichenbach’s common cause principle
-If two random variables $X$ and $Y$ are statistically dependent $not (X \mathrel{\unicode{x2AEB}} Y)$, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent, $X \mathrel{independent} Z$.
+If two random variables $X$ and $Y$ are statistically dependent, then there exists a third variable $Z$ that causally influences both. As a special case, $Z$ may coincide with either $X$ or $Y$. Furthermore, this variable $Z$ screens $X$ and $Y$ from each other in the sense that given $Z$, they become independent.
 
 ## Notation
 Let $Y^{a=1}$ (read $Y$ under treatment $a=1$) be the outcome variable that would have been observed under the treatment value $a=1$, and $Y^{a=0}$ (read $Y$ under treatment $a = 0$) the outcome variable that would have been observed under $A$ the treatment value $a = 0$.
@@ -105,7 +105,7 @@ $do(E=2)$ sets $E=2$ in the graph, but conditional filters data having that cond
 
 
 ## Causation versus association
-When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__ $(A \mathrel{\unicode{x2AEB}} Y)$, that $A$ is not associated with $Y$.
+When the proportion of individuals who develop the outcome in the treated $Pr[Y = 1|A = 1]$ equals the proportion of individuals who develop the outcome in the untreated $Pr[Y = 1|A = 0]$, we say that treatment $A$ and outcome $Y$ are __independent__, that $A$ is not associated with $Y$.
 
 
 <p align="center"><img src="pics/causation_vs_assosiation.png" width="600"></p>
@@ -149,7 +149,7 @@ The lack of an arrow between $A$ and $Y$ indicates that the haplotype does not h
 
 
 Now lets check whether A and Y are associated.
-Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with $(A=1)$ and without $(A=0)$ the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent or $A \mathrel{\unicode{x2AEB}} Y$.
+Learning about the haplotype $A$ does not improve our ability to predict the outcome $Y$ because the risk in those with $(A=1)$ and without $(A=0)$ the haplotype is the same, or $Pr[Y = 1|A = 1] = Pr[Y = 1|A = 0]$. In other words, we would intuitively conclude that $A$ and $Y$ are not associated, i.e., $A$ and $Y$ are independent.
 
 Causal graphs theory again confirms our intuition because it says that colliders, unlike other variables, block the flow of association along the path on which they lie.
 
