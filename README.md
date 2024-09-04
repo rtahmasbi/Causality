@@ -29,7 +29,10 @@ Causal and prediction research usually require different methods, and yet their 
 ## Effects of Causes and Causes of Effects
 A nice paper published in 2022: [Link](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-070121-061120)
 
-We describe and contrast two distinct problem areas for statistical causality: studying the likely effects of an intervention ("effects of causes"), and studying whether there is a causal link between the observed exposure and outcome in an individual case ("causes of effects").
+
+We describe and contrast two distinct problem areas for statistical causality:
+- studying the likely effects of an intervention (effects of causes), and
+- studying whether there is a causal link between the observed exposure and outcome in an individual case (causes of effects).
 
 
 ## Forecasting Causal Effects of Interventions versus Predicting Future Outcomes
@@ -173,6 +176,12 @@ __Confounding__ is the bias due to common causes of treatment and outcome. Bello
 
 
 ## propensity score
+The conditional probability of treatment $Pr[A = 1|L]$ is known asthe propensity score.
+
+We can estimated the probability of treatment given the covariates $L$, $Pr [A = 1|L]$, for each individual. Let us refer to this conditional probability as $\pi(L)$. The value of $\pi(L)$ is close to 0 for individuals who have a low probability of receiving treatment and is close to 1 for those who have a high probability of receiving treatment. That is, $\pi(L)$ measures the propensity of individuals to receive treatment given the information available in the covariates $L$. No wonder that $\pi(L)$ is referred to as the propensity score.
+
+
+## Balancing scores and prognostic scores
 
 
 ## Instrumental variables
@@ -209,7 +218,8 @@ path of $z$ being correlated with $x$ which in turn determines $y$.
 
 # Casualty vs prediction
 Casualty is identification, not prediction.
-Predictive models can simply ignore the T variable during their learning process, while T is the most important factor.
+
+Predictive models can simply ignore the $T$ variable during their learning process, while $T$ is the most important factor.
 
 
 
@@ -264,12 +274,13 @@ https://en.wikipedia.org/wiki/Causal_system
 - average treatment effect on the untreated (ATU)
 
 
-The Cause Question: What is a cause of a given effect?
-The Effect Question: What is an effect of a given cause?
+Two important questions:
+- The Cause Question: What is a cause of a given effect?
+- The Effect Question: What is an effect of a given cause?
 
 
-problem of overdetermination and
-the problem of preemption
+
+# problem of overdetermination and the problem of preemption
 
 
 
@@ -302,8 +313,9 @@ Elements of Causal Inference: Foundations and Learning Algorithms, Jonas Peters,
 <p align="center"><img src="pics/jp-seas-2018.jpg" height="400"></p>
 Judea Pearl
 
-http://bayes.cs.ucla.edu/jp_home.html
 Professor of Computer Science Department, Cognitive Systems Lab, UCLA
+
+http://bayes.cs.ucla.edu/jp_home.html
 
 
 
@@ -313,6 +325,7 @@ Professor of Computer Science Department, Cognitive Systems Lab, UCLA
 Miguel Hernan,
 
 Kolokotrones Professor of Biostatistics and Epidemiology at Harvard and Broad Institute
+
 https://www.hsph.harvard.edu/profile/miguel-hernan/
 
 
@@ -329,14 +342,12 @@ https://www.youtube.com/watch?v=zvrcyqcN9Wo&ab_channel=BroadInstitute
 # Causality data
 ## Medical Information Mart for Intensive Care
 https://github.com/MIT-LCP/mimic-code
+
 https://mimic.mit.edu/
 
 
 
 # package
-https://github.com/Microsoft/EconML
-https://www.microsoft.com/en-us/research/group/alice/
-
 
 ## causalml - by uber
 https://github.com/uber/causalml
@@ -379,6 +390,16 @@ Traditional response modelling often targets the Sure Things being unable to dis
 
 ## dowhy - by microsoft
 https://github.com/py-why/dowhy
+
+https://www.microsoft.com/en-us/research/group/alice/
+
+
+## EconML
+https://github.com/Microsoft/EconML
+
+
+
+
 
 
 # Causal Calculus
