@@ -66,24 +66,38 @@ For each individual, one of the counterfactual outcomes (the one that correspond
 Consistency: if $A_i = a$, then $Y^a_i = Y^A_i = Y_i$.
 
 
-Individual causal effects are de ned as a contrast of the values of counterfactual outcomes, but only one of those outcomes is observed for each individual| the one corresponding to the treatment value actually experienced by the individual. All other counterfactual outcomes remain unobserved.
+Individual causal effects are defined as a contrast of the values of counterfactual outcomes, but __only__ one of those outcomes is observed for each individual the one corresponding to the treatment value actually experienced by the individual. All other counterfactual outcomes remain __unobserved__.
+
 
 
 ## Interventions
 Assume
+
 $$C:= N_C$$
+
 $$E:=4 C + N_E$$
+
 with $N_C, N_E \sim N(0,1)$. Graphically,
+
 $$C \rightarrow E.$$
+
 Then
+
 $$P_E = N(0,17)$$
+
 $$P_E^{do(C:=2)} = P_{E|C=2} = N(8,1)$$
+
 $$P_E^{do(C:=3)} = P_{E|C=3} = N(12,1)$$
+
 and
+
 $$P_C^{do(E:=100)} = N(0,1)$$
+
 (no matter how much we whiten someone’s teeth, this will not have any effect on this person’s smoking habits)
 similarly,
+
 $$P_C^{do(E:=2)} = N(0,1) \neq P_{C|E=2} = N(8/17, 1/17).$$
+
 proof of $P_{C|E=2}$ is based on the conditional multivariate normal distribution.
 
 $do(E=2)$ sets $E=2$ in the graph, but conditional filters data having that condition.
@@ -324,10 +338,47 @@ https://github.com/Microsoft/EconML
 https://www.microsoft.com/en-us/research/group/alice/
 
 
+## causalml - by uber
 https://github.com/uber/causalml
 
+They use ML for uplift modeling and they dont care about the causal graph, they more are intersted in the treatment effect. They are hevily dependent on the uplift model.
+
+> It allows user to estimate the Conditional Average Treatment Effect (CATE) or Individual Treatment Effect (ITE) from experimental or observational data. Essentially, it estimates the causal impact of intervention $T$ on outcome $Y$ for users with observed features $X$, without strong assumptions on the model form.
 
 
+
+
+### Uplift_modelling
+https://en.wikipedia.org/wiki/Uplift_modelling
+
+The uplift of a marketing campaign is usually defined as the difference in response rate between a treated group and a randomized control group.
+
+However, many marketers define lift (rather than uplift) as the difference in response rate between treatment and control, so uplift modeling can be defined as improving (upping) lift through predictive modeling.
+
+There are 4 groups
+- The Persuadables : customers who only respond to the marketing action because they were targeted
+- The Sure Things  : customers who would have responded whether they were targeted or not
+- The Lost Causes  : customers who will not respond irrespective of whether or not they are targeted
+- The Do Not Disturbs or Sleeping Dogs : customers who are less likely to respond because they were targeted
+
+The only segment that provides true incremental responses is the Persuadables.
+
+Uplift modelling provides a scoring technique that can separate customers into the groups described above.
+(How?)
+
+Traditional response modelling often targets the Sure Things being unable to distinguish them from the Persuadables.
+
+
+
+
+### ref
+- CausalML: Python Package for Causal Machine Learning https://arxiv.org/pdf/2002.11631
+- Uplift Modeling for Multiple Treatments with Cost Optimization https://arxiv.org/pdf/1908.05372
+
+
+
+## dowhy - by microsoft
+https://github.com/py-why/dowhy
 
 
 # Causal Calculus
@@ -364,10 +415,9 @@ The do-calculus is an axiomatic system for replacing probability formulas contai
 
 ## Do-calculus adventures
 https://www.andrewheiss.com/blog/2021/09/07/do-calculus-backdoors/
-Rule 1: Decide if we can ignore an observation
-Rule 2: Decide if we can treat an intervention as an observation
-Rule 3: Decide if we can ignore an intervention
+
+- Rule 1: Decide if we can ignore an observation
+- Rule 2: Decide if we can treat an intervention as an observation
+- Rule 3: Decide if we can ignore an intervention
 
 
-
-#END
