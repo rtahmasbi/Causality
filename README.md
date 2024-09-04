@@ -178,7 +178,7 @@ __Confounding__ is the bias due to common causes of treatment and outcome. Bello
 ## propensity score
 The conditional probability of treatment $Pr[A = 1|L]$ is known asthe propensity score.
 
-We can estimated the probability of treatment given the covariates $L$, $Pr [A = 1|L]$, for each individual. Let us refer to this conditional probability as $\pi(L)$. The value of $\pi(L)$ is close to 0 for individuals who have a low probability of receiving treatment and is close to 1 for those who have a high probability of receiving treatment. That is, $\pi(L)$ measures the propensity of individuals to receive treatment given the information available in the covariates $L$. No wonder that $\pi(L)$ is referred to as the propensity score.
+We can estimated the probability of treatment given the covariates $L$, $Pr [A = 1|L]$, for each individual. Let us refer to this conditional probability as $\pi(L)$. The value of $\pi(L)$ is close to 0 for individuals who have a low probability of receiving treatment and is close to 1 for those who have a high probability of receiving treatment. That is, $\pi(L)$ measures the propensity of individuals to receive treatment given the information available in the covariates $L$. No wonder that $\pi(L)$ is referred to as the propensity score.
 
 
 ## Balancing scores and prognostic scores
